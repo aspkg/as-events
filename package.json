@@ -1,0 +1,37 @@
+{
+  "name": "as-events",
+  "version": "0.1.4",
+  "description": "EventEmitter for AssemblyScript",
+  "main": "index.js",
+  "types": "./assembly/index.ts",
+  "ascMain": "./assembly/index.ts",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assemblyscript-community/as-events.git"
+  },
+  "keywords": [
+    "assemblyscript",
+    "event",
+    "EventEmitter",
+    "emitter"
+  ],
+  "scripts": {
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "test": "node tests"
+  },
+  "devDependencies": {
+    "@assemblyscript/loader": "^0.18.24",
+    "assemblyscript": "^0.18.24"
+  },
+  "author": "JairusSW",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/assemblyscript-community/as-events/issues"
+  },
+  "homepage": "https://github.com/assemblyscript-community/as-events#readme"
+}
